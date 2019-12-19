@@ -29,7 +29,21 @@
 	<div class="ptc_shows">
 
 		
-	<?php the_content(); ?>
+	<?php $show_infos = array('story', 'dates', 'photos', 'songs', 'videos', 'education_pack', 'fun_&_games');
+	echo '<div class = "show_info_tabs">';
+	foreach($show_infos as $show_info) {
+		if(get_field($show_info)) {
+			$field = get_field_object($show_info);
+			echo '<h2>' . $field['label'] . '</h2>';
+		}
+	}
+	echo '</div><!--.show_info-->';
+	echo '<div class = "show_info_tabs">';
+	foreach($show_infos as $show_info) {
+			the_field($show_info);
+	}
+	echo '</div><!--.show_info-->';
+	?>
 
 	</div><!--.ptc_shows-->
 
