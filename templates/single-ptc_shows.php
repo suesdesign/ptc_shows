@@ -29,20 +29,26 @@
 	<div class="ptc_shows">
 
 		
-	<?php $show_infos = array('story', 'dates', 'photos', 'songs', 'videos', 'education_pack', 'fun_&_games');
-	echo '<div id="tabs"><ul>';
+	<?php $show_infos = array('story', 'dates', 'photos', 'songs', 'videos', 'education_pack', 'fun_and_games');
+	echo '<div class="js-tabs"><ul class="js-tablist">';
 	
 	foreach($show_infos as $show_info) {
 		if(get_field($show_info)) {
 			$field = get_field_object($show_info);
-			echo '<li><a href="#' . $field['name'] . '">'. $field['label'] . '</a></li>';
+			echo '<li class="js-tablist__item"><a href="#' 
+			. $field['name'] 
+			. '" id="label_' 
+			. $field['name'] 
+			. '"class="js-tablist__link">'
+			. $field['label'] 
+			. '</a></li>';
 		}
 	}
 	
 	echo '</ul>';
 	foreach($show_infos as $show_info) {
 			$field = get_field_object($show_info);
-			echo '<div><h2 id="' . $field['name'] . '">' . $field['label'] . '</h2>';
+			echo '<div class="js-tabcontent" id="' . $field['name'] . '">';
 			the_field($show_info);
 			echo '</div>';
 	}

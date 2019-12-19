@@ -22,8 +22,8 @@ class Enqueue_Files
     }
 
     public function ptc_shows_js() {
-        wp_register_script('ptc_shows_js', plugin_dir_url( __FILE__ ) . '../assets/js/ptc_shows_js.js', array('jquery'), '', 1);
-	    wp_enqueue_script('ptc_shows_js' );
+        wp_register_script('jquery-accessible-tabs', plugin_dir_url( __FILE__ ) . '../assets/js/jquery-accessible-tabs.js', array('jquery'), '', 1);
+	    wp_enqueue_script('jquery-accessible-tabs' );
     }
 }
 

@@ -1,132 +1,40 @@
-/* Based on CSS from 'Standard tabs without ARIA roles' https://codepen.io/jeffsmith/pen/mPByya/ */
-
-body {
-  margin: 2em;
-}
-
-#tabs {
-  /*max-width: 50em;*/
-}
-
-#tabs h2 {
-  margin: 1em 0 0;
-}
-
-#tabs h2:focus {
-  outline: 0;
-  /* If you're removing the outline, you must add something as good or better! */
-  text-decoration: underline;
-}
-
-.tabsList {
-  float: left;
-  list-style: none;
-  margin: 0;
-  padding-left: 2.35em;
-}
-
-.tabsList li {
-  position: relative; /*for z-index*/
-  float: left;
-  margin: 0 0.5em 0 0;
-  z-index: 1;
-}
-
-.tabsList li a {
-  position: relative;
-  top: 4px;
-  float: left;
-  overflow: hidden;
-  font-weight: normal;
-  text-shadow: none;
-  background: #fff;
-  color: #444;
-  text-decoration: none;
-  margin: 0.5em 0 0;
-  padding: 0.5em 0.5em 0.35em;
-  border-style: solid;
-  border-color: #ccc;
-  border-width: 2px 2px 0;
-  -moz-border-radius-topleft: 0.5em;
-  -moz-border-radius-topright: 0.5em;
-  -webkit-border-top-left-radius: 0.5em;
-  -webkit-border-top-right-radius: 0.5em;
-  border-top-left-radius: 0.5em;
-  border-top-right-radius: 0.5em;
-  cursor: pointer;
-}
-
-.tabsList li a:link {
-  border-color: #ccc;
-}
-
-.tabsList li a:hover,
-.tabsList li a:focus,
-.tabsList li a:active {
-  border-color: #999;
-  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-}
-
-.tabsList li a:active {
-  top: 2px;
-}
-
-.tabsList li.current {
-  z-index: 10;
-}
-
-.tabsList li.current a {
-  top: 2px;
-  font-weight: bold;
-  color: #333;
-  background: #fafafa;
-  border-color: #999;
-  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-}
-
-.tabsList li.current a:hover,
-.tabsList li.current a:focus {
-  color: #333;
-  background-color: #fafafa;
-}
-
-.tabsList li.current a:focus {
-  outline: 1px dotted #444;
-}
-
-.tabsList a span {
-  position: absolute;
-  top: auto;
-  width: 1px;
+/* --------------- styles for tabs -----------------------*/
+/*.invisible {
+  border: 0;
+  clip: rect(0 0 0 0);
   height: 1px;
+  margin: -1px;
   overflow: hidden;
-  opacity: 0;
+  padding: 0;
+  position: absolute;
+  width: 1px;
 }
-
-.tabPanel {
-  position: relative; /*for z-index*/
-  display: block;
-  visibility: visible;
-  clear: left;
-  overflow: auto;
-  padding: 0.5em 3em 2em;
-  border: 2px solid #999;
-  -moz-border-radius: 1em;
-  -webkit-border-radius: 1em;
-  border-radius: 1em;
-  z-index: 5;
-  color: #333;
-  background-color: #fafafa;
+.js-tabs-tabs__list {
+  margin: 0;
+  padding: 0;
 }
-
-.tabPanel:focus {
-  outline: 1px dotted #999;
-}
-
-.tabPanel h2 {
+.js-tabs-tabs__item {
   display: inline-block;
 }
+.js-tabs-tabs__link {
+  display: inline-block;
+  padding: 1em 2em;
+  background: #f2f2f2;
+  cursor: pointer;
+  color: #148297;
+}
+[aria-selected="true"].js-tabs-tabs__link {
+  color: #000;
+}
+.js-tabs-tabs__content {
+  background: #f2f2f2;
+  padding: 1em;
+}
 
-.tabPanel h2:focus {
-  outline: 1px dotted #999;
+[aria-hidden="true"].js-tabs-tabs__content {
+  display: none;
+}
+*/
+.js-tabcontent[aria-hidden="true"] {
+  display: none;
 }
