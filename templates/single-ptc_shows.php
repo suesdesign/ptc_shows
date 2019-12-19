@@ -30,19 +30,23 @@
 
 		
 	<?php $show_infos = array('story', 'dates', 'photos', 'songs', 'videos', 'education_pack', 'fun_&_games');
-	echo '<div class = "show_info_tabs">';
+	echo '<div id="tabs"><ul>';
+	
 	foreach($show_infos as $show_info) {
 		if(get_field($show_info)) {
 			$field = get_field_object($show_info);
-			echo '<h2>' . $field['label'] . '</h2>';
+			echo '<li><a href="#' . $field['name'] . '">'. $field['label'] . '</a></li>';
 		}
 	}
-	echo '</div><!--.show_info-->';
-	echo '<div class = "show_info_tabs">';
+	
+	echo '</ul>';
 	foreach($show_infos as $show_info) {
+			$field = get_field_object($show_info);
+			echo '<div><h2 id="' . $field['name'] . '">' . $field['label'] . '</h2>';
 			the_field($show_info);
+			echo '</div>';
 	}
-	echo '</div><!--.show_info-->';
+	echo '</div><!--#tabs-->';
 	?>
 
 	</div><!--.ptc_shows-->

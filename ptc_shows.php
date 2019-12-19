@@ -31,4 +31,5 @@ if( ! defined('ABSPATH') ) {
 
 require plugin_dir_path( __FILE__ ) . 'includes/class-register_posts.php';
 require plugin_dir_path( __FILE__ ) . 'includes/class-templates.php';
-require plugin_dir_path( __FILE__ ) . 'includes/class-register-taxonomy.php';
+require plugin_dir_path( __FILE__ ) . 'includes/class-shows_register_taxonomy.php';
+require plugin_dir_path( __FILE__ ) . 'includes/class-enqueue_files.php';
