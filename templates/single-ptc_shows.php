@@ -19,7 +19,6 @@
 		</h1>
 	</header>
 
-	<div id="ptc_shows-list">
 
 	<?php if ( have_posts () ) : ?>
 
@@ -39,7 +38,7 @@
 			. $field['name'] 
 			. '" id="label_' 
 			. $field['name'] 
-			. '"class="js-tablist__link">'
+			. '" class="js-tablist__link">'
 			. $field['label'] 
 			. '</a></li>';
 		}

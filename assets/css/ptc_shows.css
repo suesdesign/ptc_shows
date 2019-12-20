@@ -3,6 +3,7 @@
 .js-tablist__item {
   float: left;
 }
+
 #maincontent ul.js-tablist {
   padding: 0;
   margin: 0;
@@ -24,16 +25,22 @@
   border-top: 1px solid #ccc;
   border-left: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
-  background-color: aqua;
+  background-color: rgb(157, 7, 231);
   color: #fff;
   border-radius: 0.5rem 0.5rem 0 0;
 }
+
+.js-tablist__link:hover {
+  color: #ccc;
+  cursor: pointer;
+}
+
 .js-tablist__item:last-child .js-tablist__link {
   border-right: 1px solid #ccc;
 }
 
 .js-tablist__link[aria-selected="true"] {
-  color: aqua;
+  color: rgb(157, 7, 231);
   background-color: #fff;
   border-bottom: 1px solid #fff;
 }
