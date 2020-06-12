@@ -24,23 +24,25 @@
 
 	<?php if ( have_posts () ) : ?>
 
-		<?php  $args = array(
-			'posts_per_page' => '12',
-			'paged' => get_query_var('paged') ? get_query_var('paged') : 1
-		);?>
+	<?php 
+  		$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+  		query_posts($query_string.'&posts_per_page=12&paged='.$paged);
+  	?>
 
 		<?php while ( have_posts() ) : the_post(); ?>
 
 	<div class="ptc_shows">
-		<h2><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" class="ptc_shows-title"><?php the_title(); ?></a></h2>
+	<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
+		<h2 class="ptc_shows-title"><?php the_title(); ?></h2>
 		
 		<?php the_content(); ?>
-
+		</a>
 	</div><!--.ptc_shows-->
 
 	<?php endwhile; else :?>
 	<?php endif; ?>
-	</div><!--#custom-posts-list-->
+	
+	</div><!--.ptc_shows-->
 
 	<!--bottom navigation to older and newer posts if there is more than one page of posts-->
 	<div class="page-navigation">

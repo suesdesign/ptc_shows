@@ -44,6 +44,7 @@ class Register_Posts
     
         $this->args = array(
             'labels' => $this->labels,
+            'menu_icon' => 'dashicons-tickets-alt',
             'public' => true,
             'has_archive' => true,
             'supports' => array( 'title', 'editor', 'thumbnail', 'author', 'excerpt' ),

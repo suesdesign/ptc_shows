@@ -25,10 +25,10 @@
 		
 	<?php while ( have_posts() ) : the_post(); ?>
 
-	<div class="ptc_shows">
+	<div class="ptc_shows-single">
 
 		
-	<?php $show_infos = array('story', 'dates', 'photos', 'songs', 'videos', 'reviews', 'education_pack', 'fun_and_games');
+	<?php $show_infos = array('story', 'dates', 'photos', 'songs', 'videos', 'education_pack', 'fun_and_games');
 	echo '<div class="js-tabs"><ul class="js-tablist">';
 	
 	foreach($show_infos as $show_info) {

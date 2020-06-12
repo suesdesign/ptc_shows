@@ -6,18 +6,20 @@
 
  /*
 Plugin Name: PTC Shows
-Plugin URI: http://suesdesign.co.uk/
+Plugin URI: https://suesdesign.co.uk/
 Description: People's Theatre Company show listings
 Author: Sue Johnson
 Version: 1.0
-Author URI: http://suesdesign.co.uk/
+Author URI: https://suesdesign.co.uk/
 */
+
+
+
+namespace PTC_Shows;
 
 /**
  * Exit if this file is accessed directly
  */
-
-namespace PTC_Shows;
 
 if( ! defined('ABSPATH') ) {
     exit;

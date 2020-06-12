@@ -5,10 +5,12 @@
 }
 
 #maincontent ul.js-tablist {
-  padding: 0;
+  padding: 0 0 1px 0;
   margin: 0;
   border-bottom: 1px solid #ccc;
+  list-style-type: none;
 }
+
 #maincontent ul.js-tablist::after {
   content: "";
   clear: both;
@@ -20,36 +22,64 @@
   margin: 0;
 }
 
-.js-tablist__link {
+#maincontent .js-tablist__link {
   padding: 0.5rem 0.8rem;
   border-top: 1px solid #ccc;
   border-left: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
-  background-color: rgb(157, 7, 231);
+  background-color: #803c86;
   color: #fff;
   border-radius: 0.5rem 0.5rem 0 0;
 }
 
-.js-tablist__link:hover {
+#maincontent .js-tablist__link:hover {
   color: #ccc;
   cursor: pointer;
 }
 
-.js-tablist__item:last-child .js-tablist__link {
+#maincontent .js-tablist__item:last-child .js-tablist__link {
   border-right: 1px solid #ccc;
 }
 
-.js-tablist__link[aria-selected="true"] {
-  color: rgb(157, 7, 231);
+#maincontent .js-tablist__link[aria-selected="true"] {
+  color: #803c86;
   background-color: #fff;
   border-bottom: 1px solid #fff;
 }
 
-.js-tabcontent {
+#maincontent .js-tabcontent {
   clear: left;
   padding-top: 1rem;
 }
 
-.js-tabcontent[aria-hidden="true"] {
+#maincontent .js-tabcontent[aria-hidden="true"] {
   display: none;
+}
+
+.ptc_shows a {
+  text-decoration: none;
+}
+
+.ptc_shows p {
+  color: #000000;
+}
+
+.ptc_shows:hover .ptc_shows-title {
+  text-decoration: underline;
+}
+
+h2.ptc_shows-title {
+  text-align: center;
+  font-family: "Amatic SC", Arial, Helvetica, sans-serif;
+  font-size: 3rem;
+}
+
+.ptc_shows {
+  background-color: rgb(243, 230, 244);;
+  padding: 1rem 1rem 0 1rem;
+  margin-bottom: 1rem;
+}
+
+#maincontent .ptc_shows img {
+  border: 2px solid #ffffff;
 }
